@@ -10,5 +10,16 @@
 
 <body>
     <h1>Hello {{ name }} !</h1>
+      {% for product in products %}
+        {% if loop.index < 4 %}
+            {{ product }}
+        {% endif %} 
+    {% endfor %}
+    <br/>
+    {% for product in products %}
+        {% if loop.index > 3 %}
+            {{ product }}
+        {% endif %} 
+    {% endfor %}
 </body>
 </html>
